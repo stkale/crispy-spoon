@@ -1,4 +1,4 @@
-package com.github.stkale.crispyspoon
+package com.github.stkale.spoon
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

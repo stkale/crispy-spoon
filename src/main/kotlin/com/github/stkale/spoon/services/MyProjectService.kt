@@ -1,9 +1,9 @@
-package com.github.stkale.crispyspoon.services
+package com.github.stkale.spoon.services
 
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.stkale.crispyspoon.MyBundle
+import com.github.stkale.spoon.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

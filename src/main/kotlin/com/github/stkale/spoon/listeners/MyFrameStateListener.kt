@@ -1,4 +1,4 @@
-package com.github.stkale.crispyspoon.listeners
+package com.github.stkale.spoon.listeners
 
 import com.intellij.ide.FrameStateListener
 import com.intellij.openapi.diagnostic.thisLogger

@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# crispy-spoon Changelog
+# Crispy Spoon Changelog
 
 ## [Unreleased]
 ### Added
