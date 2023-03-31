@@ -8,8 +8,20 @@
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
+    <actions>
+        <action id="com.github.stkale.spoon.actions.BrowseAssignmentsAction"
+                class="com.github.stkale.spoon.actions.BrowseAssignmentsAction"
+                text="Crispy Spoon: Browse Assignments" description="Browse assignments description TODO.">
+            <override-text place="MainMenu" text="Browse Assignments..."/>
+            <add-to-group group-id="FileOpenGroup" anchor="after" relative-to-action="OpenFile"/>
+        </action>
+    </actions>
+
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.stkale.spoon.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow id="MyToolWindow" anchor="right" order="first"
+                    factoryClass="com.github.stkale.spoon.toolWindow.MyToolWindowFactory"/>
+        <welcomeTabFactory order="last"
+                           implementation="com.github.stkale.spoon.welcomeTab.MyWelcomeTabFactory"/>
     </extensions>
 
     <applicationListeners>
