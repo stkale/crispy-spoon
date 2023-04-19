@@ -6,6 +6,7 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.ui.DialogWrapper
 import kotlinx.coroutines.*
+import kotlinx.coroutines.swing.Swing
 import org.jetbrains.annotations.Nullable
 import java.awt.BorderLayout
 import java.awt.Dimension
@@ -19,7 +20,7 @@ class BrowseAssignmentsDialog : DialogWrapper(true), CoroutineScope {
     private val job = Job()
 
     override val coroutineContext: CoroutineContext
-        get() = job + Dispatchers.Main
+        get() = job + Dispatchers.Swing
 
     init {
         title = "Browse Assignments"
@@ -41,18 +42,20 @@ class BrowseAssignmentsDialog : DialogWrapper(true), CoroutineScope {
 
     private fun loadAssignments() {
         val service = service<MyApplicationService>()
+            .getCharonService()
 
-        val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
-            throwable.printStackTrace()
-        }
+        val coroutineExceptionHandler =
+            CoroutineExceptionHandler { _, throwable ->
+                throwable.printStackTrace()
+            }
 
         launch(Dispatchers.IO + coroutineExceptionHandler) {
+
             val assignments = service
-                .getCharonService()
                 .getCharons()
                 .body() ?: emptyList()
 
-            withContext(Dispatchers.Main) {
+            withContext(Dispatchers.Swing) {
                 updateAssignments(assignments)
             }
         }
