@@ -24,8 +24,7 @@ class MyApplicationService {
         val contentType = "application/json".toMediaType()
         val json = Json { ignoreUnknownKeys = true }
         val retrofit = Retrofit.Builder()
-            // .baseUrl("https://moodle.taltech.ee/mod/charon/api/")
-            .baseUrl("http://localhost/mod/charon/api/")
+            .baseUrl("https://moodle.taltech.ee/mod/charon/api/")
             .addConverterFactory(json.asConverterFactory(contentType))
             .client(httpClient)
             .build()

@@ -8,7 +8,9 @@ import org.jetbrains.annotations.NotNull
 class BrowseAssignmentsAction : AnAction() {
 
     override fun actionPerformed(@NotNull e: AnActionEvent) {
-        BrowseAssignmentsDialog().show()
+        if (BrowseAssignmentsDialog().showAndGet()) {
+            // user pressed OK
+        }
     }
 
     companion object {
