@@ -7,7 +7,7 @@ fun environment(key: String) = providers.environmentVariable(key)
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
 
-    val coroutinesVersion = "1.7.0-Beta"
+    val coroutinesVersion = "1.7.0-RC"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:$coroutinesVersion")
 
