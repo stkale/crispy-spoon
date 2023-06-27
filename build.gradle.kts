@@ -20,7 +20,7 @@ plugins {
     // Java support
     id("java")
 
-    val kotlinVersion = "1.8.21"
+    val kotlinVersion = "1.8.22"
     // Kotlin support
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     // Kotlin Serialization Plugin
