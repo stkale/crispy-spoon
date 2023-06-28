@@ -1,0 +1,37 @@
+[versions]
+# libraries
+annotations = "24.0.1"
+kotlin-serialization = "1.5.1"
+kotlin-coroutines = "1.7.1"
+retrofit = "2.9.0"
+kotlin-serialization-converter = "1.0.0"
+okhttp = "4.11.0"
+
+# plugins
+dokka = "1.8.10"
+kotlin = "1.8.22"
+changelog = "2.1.0"
+gradle-intellij-plugin = "1.14.2"
+qodana = "0.1.13"
+kover = "0.6.1"
+
+[libraries]
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin-serialization" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
+kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlin-serialization" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit2-kotlinx-serialization-converter = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "kotlin-serialization-converter" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+
+[bundles]
+kotlinx-coroutines = ["kotlinx-coroutines-core", "kotlinx-coroutines-swing"]
+
+[plugins]
+changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+gradle-intellij-plugin = { id = "org.jetbrains.intellij", version.ref = "gradle-intellij-plugin" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+qodana = { id = "org.jetbrains.qodana", version.ref = "qodana" }
