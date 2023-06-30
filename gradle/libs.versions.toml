@@ -2,7 +2,7 @@
 # libraries
 annotations = "24.0.1"
 kotlin-serialization = "1.5.1"
-kotlin-coroutines = "1.7.1"
+kotlin-coroutines = "1.7.2"
 retrofit = "2.9.0"
 kotlin-serialization-converter = "1.0.0"
 okhttp = "4.11.0"
