@@ -9,7 +9,7 @@ okhttp = "4.11.0"
 
 # plugins
 dokka = "1.8.10"
-kotlin = "1.8.22"
+kotlin = "1.9.0"
 changelog = "2.1.0"
 gradle-intellij-plugin = "1.14.2"
 qodana = "0.1.13"
