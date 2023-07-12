@@ -1,5 +1,7 @@
 package com.github.stkale.spoon.toolWindow
 
+import com.github.stkale.spoon.MyBundle
+import com.github.stkale.spoon.services.MyProjectService
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
@@ -7,13 +9,9 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.stkale.spoon.MyBundle
-import com.github.stkale.spoon.services.MyProjectService
 import javax.swing.JButton
 
 class MyToolWindowFactory : ToolWindowFactory {
-
-    private val contentFactory = ContentFactory.getInstance()
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         val myToolWindow = MyToolWindow(toolWindow)

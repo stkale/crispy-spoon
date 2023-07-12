@@ -8,7 +8,6 @@ kotlin-serialization-converter = "1.0.0"
 okhttp = "4.11.0"
 
 # plugins
-dokka = "1.8.20"
 kotlin = "1.9.0"
 changelog = "2.1.2"
 gradle-intellij-plugin = "1.15.0"
@@ -29,7 +28,6 @@ kotlinx-coroutines = ["kotlinx-coroutines-core", "kotlinx-coroutines-swing"]
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 gradle-intellij-plugin = { id = "org.jetbrains.intellij", version.ref = "gradle-intellij-plugin" }
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
